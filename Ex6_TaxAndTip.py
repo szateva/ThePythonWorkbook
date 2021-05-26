@@ -1,4 +1,4 @@
-""" Reading in the cost of a meal.
+""" Reading in the cost of a meal from the user.
  Calculate the tax and the tip for the meal.
  Use your local tax rate
  Tip = 18% before tax
