@@ -14,5 +14,5 @@ rad_t2 = math.radians(t2)
 rad_g2 = math.radians(g2)
 earth_radius = 6371.01
 
-distance = earth_radius*math.acos( math.sin(rad_t1) * math.sin(rad_t2) + math.cos(rad_t1) * math.cos(rad_t2)*math.cos(rad_g1 - rad_g2))
+distance = earth_radius * math.acos( math.sin(rad_t1) * math.sin(rad_t2) + math.cos(rad_t1) * math.cos(rad_t2)*math.cos(rad_g1 - rad_g2))
 print("The distance between the two points in km is: ", round(distance,2))
