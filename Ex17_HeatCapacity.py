@@ -11,6 +11,9 @@ q = m * C * delta_T
 
 print("To raise/lower %d grams of water by %d Celsius you will need %.2f Jules energy" %(m, delta_T, q))
 
+""" Extension: calculate the cost of heating up the water
+ use unit cost of 8.9 cents per KWh"""
+
 electricity_unit_cost = 8.9  # cent per KWh
 conversion_factor = 3600000     # Jules to KWh
 energy_KWh = q / conversion_factor
