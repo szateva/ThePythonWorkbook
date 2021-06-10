@@ -1,4 +1,4 @@
-""" read from the user the mass (m) in grams of water
+""" read from the user the mass of water (m) in grams
  and the temperature change (delta_T)
  then calculate and display the total amount of energy (q) needed to achieve the temperature change
  negative q values represent energy to be taken out to cool the water"""
