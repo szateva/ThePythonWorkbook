@@ -20,4 +20,4 @@ energy_KWh = q / conversion_factor
 cost_of_changingT = energy_KWh * electricity_unit_cost
 
 
-print("To heat up/cool down %d grams of water by %d Celsius it will cost %.2f cents" % (m, delta_T, cost_of_changingT))
+print("To heat up/cool down %d grams of water by %d Celsius will cost %.2f cents" % (m, delta_T, cost_of_changingT))
