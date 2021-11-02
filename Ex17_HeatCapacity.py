@@ -7,7 +7,7 @@ m = int(input("How many grams of water would you like to warm/cool? "))
 delta_T = int(input("How many Celsius would you like to warm/cool the water by? "))
 
 C = 4.186   # heat capacity of water
-q = m * C * delta_T
+q = m * C * delta_T  # energy needed to achieve change
 
 print("To raise/lower %d grams of water by %d Celsius you will need %.2f Jules energy" %(m, delta_T, q))
 
