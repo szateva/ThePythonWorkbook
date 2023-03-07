@@ -12,7 +12,6 @@ import math
 number_of_sides = int(input("How many sides the regular polygon has? "))
 side = int(input("How many cm is each side of the regular polygon? "))
 
-
 area_regular_polygon = round((number_of_sides * side**2)/(4*math.tan(math.pi/number_of_sides)), 2)
 
 print("The area of a {0} sided polygon, whose sides are {1} cm long is {other} cm2".format(number_of_sides, side, other=area_regular_polygon))
