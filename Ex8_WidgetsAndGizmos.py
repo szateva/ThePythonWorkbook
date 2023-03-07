@@ -1,6 +1,6 @@
 """ two products: widgets and gizmos
- Each widget weighs 75 g each
- Each gizmos weighs 112 g each
+ Each widget weighs 75 g
+ Each gizmos weighs 112 g
  read from user the no of widgets and gizmos
  compute and display the total weight"""
 

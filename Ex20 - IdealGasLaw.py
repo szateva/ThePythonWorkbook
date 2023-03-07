@@ -19,6 +19,6 @@ volume = float(input("What is the volume of the gas in litres? "))
 n_mol = (pressure*volume)/(R*temperature_K) # formula from exercise rearranged to express the number of mol
 n_mol_rounded = round(n_mol, 2) # rounded calculation for ease of reading
 
-print("The amount of gas is ", n_mol_rounded, "mol.")
+print("The amount of gas is", n_mol_rounded, "mol.")
 
 
