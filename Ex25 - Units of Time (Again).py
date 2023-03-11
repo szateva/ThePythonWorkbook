@@ -31,3 +31,5 @@ seconds = remainder_after_minutes
 
 # print(f"There are {days} days, {hours} hours, {minutes} minutes and {seconds} seconds in {total_seconds} seconds.")
 print(f"{days}:{hours:02d}:{minutes:02d}:{seconds:02d}")
+
+print("The equivalent duration is", "%d:%02d:%02d:%02d." % (days, hours, minutes, seconds)) # suggested solution
