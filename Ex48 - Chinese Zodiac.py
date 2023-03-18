@@ -42,7 +42,7 @@ elif (year % 12) == 5:
     chinese_zodiac = "Ox"
 elif (year % 12) == 6:
     chinese_zodiac = "Tiger"
-elif (year % 12) == 7:
+else:
     chinese_zodiac = "Hare"
 
 print(f"The year {year} is the year of the {chinese_zodiac} in the Chinese zodiac.")
