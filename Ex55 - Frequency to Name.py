@@ -12,7 +12,7 @@ table below:
 Write a program that reads the frequency of the radiation from the user and displays the appropriate name.
 """
 
-radiation_freq = int(input("Please, enter the frequency of the radiation (Hz): "))
+radiation_freq =float(input("Please, enter the frequency of the radiation (Hz): "))
 
 if 0 <= radiation_freq < 3*10**9:
     radiation_name = "Radio waves"
