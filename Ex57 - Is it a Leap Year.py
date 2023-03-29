@@ -24,6 +24,6 @@ else:
         else:
             leap = False
 if leap == True:
-    print(f" {year} is a leap year.")
+    print(f"{year} is a leap year.")
 else:
     print(f"{year} is not a leap year.")
