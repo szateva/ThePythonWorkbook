@@ -26,57 +26,54 @@ else:
 if (month == 1) or (month == 3) or (month == 5) or (month == 7) or (month == 8) or (month == 10):
     if 1 <= day <= 30:
         new_day = day + 1
-        next_date = f"{year}-{month}-{new_day}"
+        next_date = f"{year:0>4d}-{month:0>2d}-{new_day:0>2d}"
     elif day == 31:
         new_month = month + 1
         new_day = 1
-        next_date = f"{year}-{new_month}-{new_day}"
+        next_date = f"{year:0>4d}-{new_month:0>2d}-{new_day:0>2d}"
     else:
-        next_date = f"{year}-{month}-{day} is not a valid date."
+        next_date = f"{year:0>4d}-{month:0>2d}-{day:0>2d} is not a valid date."
 elif (month == 4) or (month == 6) or (month == 9) or (month == 11):
     if 1 <= day <= 29:
         day += 1
-        next_date = f"{year}-{month}-{day}"
+        next_date = f"{year:0>4d}-{month:0>2d}-{day:0>2d}"
     elif day == 30:
         new_month = month + 1
         new_day = 1
-        next_date = f"{year}-{new_month}-{new_day}"
+        next_date = f"{year:0>4d}-{new_month:0>2d}-{new_day:0>2d}"
     else:
-        next_date = f"{year}-{month}-{day} is not a valid date."
+        next_date = f"{year:0>4d}-{month:0>2d}-{day:0>2d} is not a valid date."
 elif month == 12:
     if 1 <= day <= 30:
         new_day = day + 1
-        next_date = f"{year}-{month}-{new_day}"
+        next_date = f"{year:0>4d}-{month:0>2d}-{new_day:0>2d}"
     elif day == 31:
         new_year = year + 1
         new_month = 1
         new_day = 1
-        next_date = f"{new_year}-{new_month}-{new_day}"
+        next_date = f"{new_year:0>4d}-{new_month:0>2d}-{new_day:0>2d}"
     else:
-        next_date = f"{year}-{month}-{day} is not a valid date."
+        next_date = f"{year:0>4d}-{month:0>2d}-{day:0>2d} is not a valid date."
 else:
     if 1 <= day <= 27:
         new_day = day + 1
-        next_date = f"{year}-{month}-{new_day}"
+        next_date = f"{year:0>4d}-{month:0>2d}-{new_day:0>2d}"
     elif day == 28:
         if leap == True:
             new_day = 29
-            next_date = f"{year}-{month}-{new_day}"
+            next_date = f"{year:0>4d}-{month:0>2d}-{new_day:0>2d}"
         else:
             new_month = month + 1
             new_day = 1
-            next_date = f"{year}-{new_month}-{new_day}"
+            next_date = f"{year:0>4d}-{new_month:0>2d}-{new_day:0>2d}"
     elif day == 29:
         if leap == True:
             new_month = month + 1
             new_day = 1
-            next_date = f"{year}-{new_month}-{new_day}"
+            next_date = f"{year:0>4d}-{new_month:0>2d}-{new_day:0>2d}"
         else:
-            next_date = f"{year}-{month}-{day} is not a valid date."
+            next_date = f"{year:0>4d}-{month:0>2d}-{day:0>2d} is not a valid date."
     else:
-        next_date = f"{year}-{month}-{day} is not a valid date."
+        next_date = f"{year:0>4d}-{month:0>2d}-{day:0>2d} is not a valid date."
 
-print(f"The date following {year}-{month}-{day} is {next_date} ")
-
-#TODO can I change the format to the standard doulbe digit date format for the month and day?
-#TODO ask Christine on Friday?
+print(f"The date following {year:0>4d}-{month:0>2d}-{day:0>2d} is {next_date} ")
