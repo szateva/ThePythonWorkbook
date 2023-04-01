@@ -33,35 +33,35 @@ if (additional_texts <= 0) and (additional_minutes <= 0):   # branch for no addi
     bill_before_tax = base_plan_cost + emergency_call_support
     tax_payable = bill_before_tax * tax
     final_bill = bill_before_tax * 1.05
-    print("Base rate charge:  $%5.2f" % base_plan_cost)
-    print("991 call support:  $%5.2f" % emergency_call_support)
-    print("Tax:               $%5.2f" % tax_payable)
-    print("Bill payable:      $%5.2f" % final_bill)
-elif (additional_texts <= 0) and (additional_minutes > 0):  # branch for additional minutes charges but no text
+    print(f"Base rate charge:.${base_plan_cost:5.2f}")
+    print(f"991 call support:.${emergency_call_support:5.2f}")
+    print(f"Tax:..............${tax_payable:5.2f}")
+    print(f"Bill payable:.....${final_bill:5.2f}")
+elif (additional_texts <= 0) and (additional_minutes > 0):  # branch for additional minutes charges but no additional texts
     bill_before_tax = base_plan_cost + emergency_call_support + additional_call_charges
     tax_payable = bill_before_tax * tax
     final_bill = bill_before_tax * 1.05
-    print("Base rate charge:            $%5.2f" % base_plan_cost)
-    print("991 call support:            $%5.2f" % emergency_call_support)
-    print("Additional call charges:     $%5.2f " % additional_call_charges)
-    print("Tax:                         $%5.2f" % tax_payable)
-    print("Bill payable:                $%5.2f" % final_bill)
-elif (additional_texts >= 0) and (additional_minutes <= 0): # branch for additional text charges but no calls
+    print(f"Base rate charge:            ${base_plan_cost:.>10.2f}")
+    print(f"991 call support:            ${emergency_call_support:.>10.2f}")
+    print(f"Additional call charges:     ${additional_call_charges:.>10.2f}")
+    print(f"Tax:                         ${tax_payable:.>10.2f}")
+    print(f"Bill payable:                ${final_bill:.>10.2f}")
+elif (additional_texts >= 0) and (additional_minutes <= 0): # branch for additional text charges but no additional calls
     bill_before_tax = base_plan_cost + emergency_call_support + additional_text_charges
     tax_payable = bill_before_tax * tax
     final_bill = bill_before_tax * 1.05
-    print("Base rate charge:            $%5.2f" % base_plan_cost)
-    print("991 call support:            $%5.2f" % emergency_call_support)
-    print("Additional text charges:     $%5.2f" % additional_text_charges)
-    print("Tax:                         $%5.2f" % tax_payable)
-    print("Bill payable:                $%5.2f" % final_bill)
+    print(f"Base rate charge:            ${base_plan_cost:5.2f}")
+    print(f"991 call support:            ${emergency_call_support:5.2f}")
+    print(f"Additional text charges:     ${additional_text_charges:5.2f}")
+    print(f"Tax:                         ${tax_payable:5.2f}")
+    print(f"Bill payable:                ${final_bill:5.2f}")
 elif (additional_texts >= 0) and (additional_minutes >= 0): # branch for both additional text and call charges
     bill_before_tax = base_plan_cost + emergency_call_support + additional_call_charges + additional_text_charges
     tax_payable = bill_before_tax * tax
     final_bill = bill_before_tax * 1.05
-    print("Base rate charge:            $%5.2f" % base_plan_cost)
-    print("991 call support:            $%5.2f" % emergency_call_support)
-    print("Additional call charges:     $%5.2f " % additional_call_charges)
-    print("Additional text charges:     $%5.2f" % additional_text_charges)
-    print("Tax:                         $%5.2f" % tax_payable)
-    print("Bill payable:                $%5.2f" % final_bill)
+    print(f"Base rate charge:            ${base_plan_cost:5.2f}")
+    print(f"991 call support:            ${emergency_call_support:5.2f}")
+    print(f"Additional call charges:     ${additional_call_charges:5.2f}")
+    print(f"Additional text charges:     ${additional_text_charges:5.2f}")
+    print(f"Tax:                         ${tax_payable:5.2f}")
+    print(f"Bill payable:                ${final_bill:5.2f}")
