@@ -9,7 +9,11 @@ should display an appropriate message if the string entered by the user is not v
 
 plate = input("Please, enter the license plate: ")
 
-if (plate[0].isupper() == True) and (plate[1].isupper() == True) and (plate[2].isupper() == True) and (0<= int(plate[3]) <= 9) and (0 <= int(plate[4]) <= 9) and (0 <= int(plate[5]) <= 9): # checks old style license plate
+if len(plate) > 6:
+    print(f"The license plate {plate} is not a valid format.")
+elif plate.isalnum() == False:
+    print(f"The license plate {plate} is not a valid format.")
+elif (plate[0].isupper() == True) and (plate[1].isupper() == True) and (plate[2].isupper() == True) and (0<= int(plate[3]) <= 9) and (0 <= int(plate[4]) <= 9) and (0 <= int(plate[5]) <= 9): # checks old style license plate
     print(f"The license plate {plate} is old style.")
 elif (0 <= int(plate[0]) <= 9) and (0 <= int(plate[1]) <= 9) and (0 <= int(plate[2]) <= 9) and (0 <= int(plate[3]) <= 9) and (plate[4].isupper() == True) and (plate[5].isupper() == True): # checks new style license plate
     print(f"The license plate {plate} is new style.")
