@@ -9,9 +9,13 @@ original_price = 4.95
 discount = 0.6 # 60% discount
 remaining_percent_to_pay = (1 - discount) # this calculates the remaining % to pay after the discount (40%)
 
-for i in range(5):
+for i in range(5):          # this version of the loop doesn't print a nice table
     print(f"Original Price: ${original_price}")
     print(f"Discount: ${round(original_price * discount,2)}")
     print(f"New Price: ${round(original_price * remaining_percent_to_pay,2)}")
     original_price += 5
 
+print("Original Price\tDiscount\tNew Price")        # this version of the loop prints a nice table
+for i in range(5):
+    print(f"${original_price}\t\t\t${round(original_price * discount,2)}\t\t${round(original_price * remaining_percent_to_pay,2)}")
+    original_price += 5
