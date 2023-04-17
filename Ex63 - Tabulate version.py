@@ -8,10 +8,8 @@ internet."""
 
 from tabulate import tabulate
 
-celsius = 0
-farenheit = (celsius * 9/5) + 32
-
 table = []
 for celsius in range(0, 101, 10):
-    table.append([celsius, f"{farenheit:.1f}"])
+    farenheit = (celsius * 9 / 5) + 32
+    table.append([celsius, f"{farenheit:}"])
 print(tabulate(table, headers=["Celsius", "Farenheit"], tablefmt="fancy_grid"))
