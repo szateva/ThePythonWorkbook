@@ -31,7 +31,9 @@ else:
 
 if letter == "A":
     number_grade = 4.0
-    if symbol == "-":
+    if symbol == "+":
+        number_grade += 0.3
+    elif symbol == "-":
         number_grade -= 0.3
     else:
        number_grade = "is not recognised as a valid"
