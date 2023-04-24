@@ -16,9 +16,14 @@ shifted_ascii_num = 0
 for char in text:
     ascii_num = ord(char)
     if 65 <= ascii_num <= 90:
-        shifted_ascii_num = (ascii_num - 65 + shift) % 26 + 65      # calculating the letter's position in the alphabet, adding the shift, and then converting it back to ascii
-    elif 97 <= ascii_num <= 122:                                    # the same as above, but for lowercase letters
+        shifted_ascii_num = (ascii_num - 65 + shift) % 26 + 65
+        # calculating the letter's position in the English alphabet (where A is position 0),
+        # adding the shift, and bringing the result back to the range 0-25, (so that shifted Z becomes C when shift = 3)
+        # and then converting the shifted letter back to ascii
+    elif 97 <= ascii_num <= 122:
+        # the same as above, but for lowercase letters
         shifted_ascii_num = (ascii_num - 97 + shift) % 26 + 97
     else:
-        shifted_ascii_num = ascii_num                               # if the character is not a letter, it is not shifted
+        shifted_ascii_num = ascii_num
+        # if the character is not a letter, it is not shifted
     print(chr(shifted_ascii_num), end="")
