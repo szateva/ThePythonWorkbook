@@ -12,7 +12,11 @@ greatest common divisor. """
 m = int(input("Please enter a positive integer: "))
 n = int(input("Please,enter another positive integer: "))
 
-d = min(m,n)
+# d = min(m,n)
+if m <= n:
+    d = m
+else:
+    d = n
 
 while (n % d != 0) or (m % d != 0):
     d -= 1
