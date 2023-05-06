@@ -11,4 +11,7 @@ def shipping_charge(items):
 
 items = int(input("Please, enter the number of items purchased: "))
 
-print(f"The shipping charge for {items} items is ${shipping_charge(items)}.")
+if items < 1:
+    print(f"{shipping_charge(items)}")
+else:
+    print(f"The shipping charge for {items} items is ${shipping_charge(items)}.")
