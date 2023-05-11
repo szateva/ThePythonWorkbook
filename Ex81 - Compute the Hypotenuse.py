@@ -8,9 +8,12 @@ from math import sqrt
 def hypotenuse(a, b):
     return sqrt(a ** 2 + b ** 2)
 
-a = float(input("Please, enter the length of the adjacent in a right angled triangle (cm): "))
-b = float(input("Please, enter the length of the opposite in a right angled triangle (cm): "))
+def main():
+    a = float(input("Please, enter the length of the adjacent in a right angled triangle (cm): "))
+    b = float(input("Please, enter the length of the opposite in a right angled triangle (cm): "))
 
-hyp = round(hypotenuse(a, b), 2)
+    hyp = round(hypotenuse(a, b), 2)
 
-print(f"For the triangle with adjacent {a}cm and opposite {b}cm the hypotenuse is {hyp}cm.")
+    print(f"For the triangle with adjacent {a}cm and opposite {b}cm the hypotenuse is {hyp}cm.")
+
+main()

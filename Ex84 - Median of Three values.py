@@ -9,8 +9,10 @@ def median(a, b, c):
     list.sort()
     return list[1]
 
-a = float(input("Please, enter the first number: "))
-b = float(input("Please, enter the second number: "))
-c = float(input("Please, enter the third number: "))
-print(f"The median of {a}, {b} and {c} is {median(a, b, c)}.")
+def main():
+    a = float(input("Please, enter the first number: "))
+    b = float(input("Please, enter the second number: "))
+    c = float(input("Please, enter the third number: "))
+    print(f"The median of {a}, {b} and {c} is {median(a, b, c)}.")
 
+main()

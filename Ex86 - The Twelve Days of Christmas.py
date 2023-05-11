@@ -25,7 +25,7 @@ of the partridge. It may appear twice if that helps you handle the difference be
 first verse and “And a partridge in a pear tree” in the subsequent verses. Import your solution to Exercise 85 to help you
 complete this exercise."""
 
-
+# from Ex85_list_version import ordinal_number
 def ordinal_number(number):
     ordinal_numbers = ["", "first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eighth",
                        "ninth", "tenth", "eleventh", "twelfth"]
@@ -60,12 +60,15 @@ def repeating_lines(number):
     elif number == 12:
         print("Twelve drummers drumming,")
 def verse(number):
+    # from Ex85_list_version import ordinal_number
     print(f"On the {ordinal_number(number)} day of Christmas")
     print("my true love sent to me:")
     for i in range(number, 0, -1):
         repeating_lines(i)
     print()
-for i in range(1, 13):
-    verse(i)
 
-verse(12)
+def main():
+    for i in range(1, 13):
+        verse(i)
+
+main()

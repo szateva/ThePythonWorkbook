@@ -10,6 +10,9 @@ def taxi_fare(distance):
     variable_fare = 0.25
     return round(base_fare + (distance * 1000 / 140) * variable_fare, 2)
 
-distance = float(input("Please, enter the distance traveled (km): "))
-fare = taxi_fare(distance)
-print(f"The total taxi fare for {distance}km is ${fare}.")
+def main():
+    distance = float(input("Please, enter the distance traveled (km): "))
+    fare = taxi_fare(distance)
+    print(f"The total taxi fare for {distance} km is ${fare}.")
+
+main()

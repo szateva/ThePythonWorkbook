@@ -15,5 +15,8 @@ def ordinal_number(number):
     else:
         return ordinal_numbers[0]
 
-for i in range(1, 13):
-    print(f"{i} is the {ordinal_number(i)} number.")
+def main():
+    for i in range(1, 13):
+        print(f"{i} is the {ordinal_number(i)} number.")
+
+main()

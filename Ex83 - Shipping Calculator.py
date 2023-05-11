@@ -9,9 +9,12 @@ def shipping_charge(items):
     else:
         return 10.95 + (items - 1) * 2.95
 
-items = int(input("Please, enter the number of items purchased: "))
+def main():
+    items = int(input("Please, enter the number of items purchased: "))
 
-if items < 1:
-    print(f"{shipping_charge(items)}")
-else:
-    print(f"The shipping charge for {items} items is ${shipping_charge(items)}.")
+    if items < 1:
+        print(f"{shipping_charge(items)}")
+    else:
+        print(f"The shipping charge for {items} items is ${shipping_charge(items)}.")
+
+main()

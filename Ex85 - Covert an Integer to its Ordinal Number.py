@@ -32,6 +32,8 @@ def ordinal_number(number):
         return "twelfth"
     else:
         return ""
+def main():
+    for i in range(1, 13):
+        print(f"{i} is the {ordinal_number(i)} number.")
 
-for i in range(1, 13):
-    print(f"{i} is the {ordinal_number(i)} number.")
+main()
