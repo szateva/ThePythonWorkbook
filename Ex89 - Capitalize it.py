@@ -6,40 +6,36 @@ provided with the string “what time do i have to be there? what’s the addres
 time do I have to be there? What’s the address?”. Include a main program that reads a string from the user, capitalizes
 it using your function, and displays the result. """
 
-def capitalize_str(string):
-    string = string.capitalize()
-    #print("1", string)
-    if " i " in string:
-        string = string.replace(" i ", " I ")
-        #print("2", string)
-    elif " i." in string:
-        string = string.replace(" i.", " I.")
-        #print("3", string)
-    elif " i!" in string:
-        string = string.replace(" i!", " I!")
-       # print("4", string)
-    elif " i?" in string:
-        string = string.replace(" i?", " I?")
-        #print("5", string)
-    elif ". " in string:
-        for i in range(len(string)):
-            if string[i] == ".":
-                string = string[:i+2] + string[i+2:].capitalize()
-                print("6", string)
+def capitalize_str(str):
+    new_str = str.capitalize()
+    #print("1", new_str)
+    new_str = new_str.replace(" i ", " I ")
+    #print("2", new_str)
+    new_str = new_str.replace(" i.", " I.")
+    #print("3", new_str)
+    new_str = new_str.replace(" i!", " I!")
+    # print("4", new_str)
+    new_str = new_str.replace(" i?", " I?")
+    #print("5", new_str)
+    if ". " in str:
+        for i in range(len(str)):
+            if str[i] == ".":
+                new_str = str[:i+2] + str[i+2:].capitalize()
+                print("6", new_str)
                 break
-    elif "! " in string:
-        for i in range(len(string)):
-            if string[i] == "!":
-                string = string[:i+2] + string[i+2].upper() + string[i+3:]
-                print("7", string)
+    elif "! " in str:
+        for i in range(len(str)):
+            if str[i] == "!":
+                new_str = str[:i+2] + str[i+2].upper() + str[i+3:]
+                print("7", new_str)
                 break
-    elif "? " in string:
-        for i in range(len(string)):
-            if string[i] == "?":
-                string = string[:i+2] + string[i+2:].capitalize()
-                print("8", string)
+    elif "? " in str:
+        for i in range(len(str)):
+            if str[i] == "?":
+                new_str = str[:i+2] + str[i+2:].capitalize()
+                print("8", new_str)
                 break
-    return string
+    return new_str
 
 def main():
     string = input("Please, enter a string: ")

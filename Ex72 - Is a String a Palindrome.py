@@ -9,7 +9,6 @@ for i in range(len(text) // 2):
     if text[i] != text[-i - 1]:
         # -i - 1 = -(i + 1) is the index of the character at the end of the string that corresponds to the character at index i
         is_palindrome = False
-        break
 if is_palindrome == True:
     print(f"{text} is a palindrome")
 else:
