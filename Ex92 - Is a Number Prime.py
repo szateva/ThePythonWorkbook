@@ -8,8 +8,6 @@ run if the file containing your solution is imported into another program.
 def is_prime(number):
     if number < 2:
         return False
-    elif number == 2:
-        return True
     else:
         for i in range(2, number):
             if number % i == 0:
